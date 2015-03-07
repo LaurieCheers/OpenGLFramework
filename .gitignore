@@ -11,9 +11,8 @@
 *.userprefs
 
 # Build results
-/Debug/
-/Release/
-OpenGLFramework/[Dd]ebug/
-OpenGLFramework/[Dd]ebugPublic/
-OpenGLFramework/[Rr]elease/
-OpenGLFramework/[Rr]eleases/
+[Dd]ebug/
+!/external/**/[Dd]ebug/
+
+[Rr]elease/
+!/external/**/[Rr]elease/
