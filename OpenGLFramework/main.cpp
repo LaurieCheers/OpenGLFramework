@@ -3,22 +3,34 @@
 
 #include <GLFW/glfw3.h>
 #include "MyGame.h"
+#include <ctime>
 
-int main(void)
+GLFWwindow* CreateWindow(Game* game);
+void GameLoop(GLFWwindow* window, Game* game);
+
+/*int main(void)
 {
-	GLFWwindow* window;
 	Game* game = new MyGame();
+	CreateWindow(game);
 
+	game->init();
+
+	glfwTerminate();
+	return 0;
+}*/
+
+GLFWwindow* CreateWindow(Game* game)
+{
 	/* Initialize the library */
 	if (!glfwInit())
-		return -1;
+		return NULL;
 
 	/* Create a windowed mode window and its OpenGL context */
-	window = glfwCreateWindow(game->windowSize.x, game->windowSize.y, game->windowTitle.c_str(), NULL, NULL);
+	GLFWwindow* window = glfwCreateWindow(game->windowSize.x, game->windowSize.y, game->windowTitle.c_str(), NULL, NULL);
 	if (!window)
 	{
 		glfwTerminate();
-		return -1;
+		return NULL;
 	}
 
 	/* Make the window's context current */
@@ -29,14 +41,26 @@ int main(void)
 	if (glewStatus != GLEW_OK)
 	{
 		fprintf(stderr, "Failed to initialize GLEW\n");
-		return -1;
+		return NULL;
 	}
 
-	game->init();
+	return window;
+}
 
+void GameLoop(GLFWwindow* window, Game* game)
+{
 	/* Loop until the user closes the window */
 	while (!glfwWindowShouldClose(window))
 	{
+		static std::clock_t lastTick = std::clock();
+
+		std::clock_t now = std::clock();
+		if (now - lastTick > (CLOCKS_PER_SEC / 30.0f))
+		{
+			game->tick();
+			lastTick = now;
+		}
+
 		/* Render here */
 		game->draw();
 
@@ -46,7 +70,4 @@ int main(void)
 		/* Poll for and process events */
 		glfwPollEvents();
 	}
-
-	glfwTerminate();
-	return 0;
 }

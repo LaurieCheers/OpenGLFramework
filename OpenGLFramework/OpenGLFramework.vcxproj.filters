@@ -57,13 +57,16 @@
     <ClInclude Include="Game.h">
       <Filter>Engine</Filter>
     </ClInclude>
-    <ClInclude Include="SpriteBatch.h">
-      <Filter>Engine</Filter>
-    </ClInclude>
-    <ClInclude Include="Rectangle.h">
+    <ClInclude Include="include\ColorRGBA.h">
       <Filter>Math</Filter>
     </ClInclude>
-    <ClInclude Include="Vector2.h">
+    <ClInclude Include="include\SpriteBatch.h">
+      <Filter>Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Vector2.h">
+      <Filter>Math</Filter>
+    </ClInclude>
+    <ClInclude Include="include\Rectangle.h">
       <Filter>Math</Filter>
     </ClInclude>
   </ItemGroup>

@@ -5,6 +5,16 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenGLFramework", "OpenGLFramework\OpenGLFramework.vcxproj", "{87D6C16D-F31A-41AE-880B-71DAA9925330}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "WalkerGame", "WalkerGame\WalkerGame.vcxproj", "{8C9E9107-BA57-49CB-A577-4638E79194F9}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87D6C16D-F31A-41AE-880B-71DAA9925330} = {87D6C16D-F31A-41AE-880B-71DAA9925330}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ExampleGame", "ExampleGame\ExampleGame.vcxproj", "{A379B1F8-4BD5-4C64-AEE9-F3378E6EFDD0}"
+	ProjectSection(ProjectDependencies) = postProject
+		{87D6C16D-F31A-41AE-880B-71DAA9925330} = {87D6C16D-F31A-41AE-880B-71DAA9925330}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Win32 = Debug|Win32
@@ -15,6 +25,14 @@ Global
 		{87D6C16D-F31A-41AE-880B-71DAA9925330}.Debug|Win32.Build.0 = Debug|Win32
 		{87D6C16D-F31A-41AE-880B-71DAA9925330}.Release|Win32.ActiveCfg = Release|Win32
 		{87D6C16D-F31A-41AE-880B-71DAA9925330}.Release|Win32.Build.0 = Release|Win32
+		{8C9E9107-BA57-49CB-A577-4638E79194F9}.Debug|Win32.ActiveCfg = Debug|Win32
+		{8C9E9107-BA57-49CB-A577-4638E79194F9}.Debug|Win32.Build.0 = Debug|Win32
+		{8C9E9107-BA57-49CB-A577-4638E79194F9}.Release|Win32.ActiveCfg = Release|Win32
+		{8C9E9107-BA57-49CB-A577-4638E79194F9}.Release|Win32.Build.0 = Release|Win32
+		{A379B1F8-4BD5-4C64-AEE9-F3378E6EFDD0}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A379B1F8-4BD5-4C64-AEE9-F3378E6EFDD0}.Debug|Win32.Build.0 = Debug|Win32
+		{A379B1F8-4BD5-4C64-AEE9-F3378E6EFDD0}.Release|Win32.ActiveCfg = Release|Win32
+		{A379B1F8-4BD5-4C64-AEE9-F3378E6EFDD0}.Release|Win32.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

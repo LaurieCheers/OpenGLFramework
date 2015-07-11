@@ -2,7 +2,7 @@
 
 #include "Game.h"
 #include <vector>
-#include "Rectangle.h"
+#include "include/Rectangle.h"
 
 class SpriteBatch;
 

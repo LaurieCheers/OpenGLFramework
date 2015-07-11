@@ -3,7 +3,7 @@
 
 #include "MyGame.h"
 #include "ContentLoader.h"
-#include "SpriteBatch.h"
+#include "include/SpriteBatch.h"
 
 MyGame::MyGame()
 {
@@ -14,7 +14,7 @@ MyGame::MyGame()
 void MyGame::init()
 {
 	GLuint programID = content->LoadShaders("SimpleVertexShader.vertexshader", "SimpleFragmentShader.fragmentshader");
-	spriteBatch = new SpriteBatch(programID, "vertexPosition_modelspace", 100);
+//TEMP	spriteBatch = new SpriteBatch(programID, "vertexPosition_modelspace", 100);
 
 	int numParticles = 100;
 	float particleSize = 0.05f;

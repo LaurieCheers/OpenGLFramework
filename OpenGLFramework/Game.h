@@ -1,7 +1,8 @@
 #pragma once
 
-#include "Vector2.h"
+#include "include/Vector2.h"
 #include <string>
+#include <GLFW/glfw3.h>
 
 class ContentLoader;
 
@@ -16,5 +17,6 @@ public:
 
 	Game();
 	virtual void init();
+	virtual void tick();
 	virtual void draw();
 };

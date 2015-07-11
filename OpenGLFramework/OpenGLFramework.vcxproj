@@ -16,7 +16,7 @@
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
-    <ConfigurationType>Application</ConfigurationType>
+    <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <PlatformToolset>v120</PlatformToolset>
     <CharacterSet>MultiByte</CharacterSet>
@@ -44,7 +44,7 @@
       <WarningLevel>Level3</WarningLevel>
       <Optimization>Disabled</Optimization>
       <SDLCheck>true</SDLCheck>
-      <AdditionalIncludeDirectories>$(SolutionDir)\external\glew-1.12.0\include;$(SolutionDir)\external\glfw-3.1.bin.WIN32\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories>$(SolutionDir)\external\glew-1.12.0\include;$(SolutionDir)\external\glfw-3.1.bin.WIN32\include;$(SolutionDir)\external\glm-0.9.4.0;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
       <PreprocessorDefinitions>_MBCS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
     </ClCompile>
     <Link>
@@ -91,10 +91,11 @@
   <ItemGroup>
     <ClInclude Include="ContentLoader.h" />
     <ClInclude Include="Game.h" />
+    <ClInclude Include="include\ColorRGBA.h" />
+    <ClInclude Include="include\Rectangle.h" />
+    <ClInclude Include="include\SpriteBatch.h" />
+    <ClInclude Include="include\Vector2.h" />
     <ClInclude Include="MyGame.h" />
-    <ClInclude Include="Rectangle.h" />
-    <ClInclude Include="SpriteBatch.h" />
-    <ClInclude Include="Vector2.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

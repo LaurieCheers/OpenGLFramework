@@ -15,8 +15,13 @@ void Game::init()
 
 }
 
+void Game::tick()
+{
+
+}
+
 void Game::draw()
 {
-	glClearColor(0.0f, 0.0f, 0.0f, 0.0f);
+	glClearColor(0.0f, 0.0f, 0.4f, 0.0f);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
